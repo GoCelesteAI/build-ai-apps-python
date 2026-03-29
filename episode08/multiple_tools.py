@@ -104,6 +104,7 @@ def ask(question):
     model="claude-sonnet-4-20250514",
     max_tokens=1024,
     tools=tools,
+    system="Respond in plain text. No markdown formatting.",
     messages=[{"role": "user", "content": question}],
   )
 
@@ -118,6 +119,7 @@ def ask(question):
       model="claude-sonnet-4-20250514",
       max_tokens=1024,
       tools=tools,
+      system="Respond in plain text. No markdown formatting.",
       messages=[
         {"role": "user", "content": question},
         {"role": "assistant", "content": message.content},

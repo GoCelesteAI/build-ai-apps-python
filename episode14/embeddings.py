@@ -1,6 +1,12 @@
 # Episode 14: Embeddings
 # Build AI Apps with Python in Neovim
 
+import os
+import warnings
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
+warnings.filterwarnings("ignore")
+
 import math
 
 # What is an embedding?
